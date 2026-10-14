@@ -266,17 +266,19 @@ JAZZMIN_SETTINGS = {
 MEDIA_URL = "/media/"
 MEDIA_ROOT = BASE_DIR / "media"
 
+AUTH_USER_MODEL = "accounts.Usuario"
+
 JAZZMIN_UI_TWEAKS = {
-    "navbar_small_text": False,
-    "footer_small_text": False,
-    "body_small_text": False,
-    "brand_small_text": False,
-    "sidebar_nav_small_text": False,
-    "sidebar_disable_expand": False,
-    "sidebar_nav_child_indent": True,
-    "sidebar_nav_compact_style": False,
-    "sidebar_nav_legacy_style": False,
-    "sidebar_nav_flat_style": False,
-    "theme": "default",
-    "default_theme_mode": "auto",
+"navbar_small_text": False,
+"footer_small_text": False,
+"body_small_text": False,
+"brand_small_text": False,
+"sidebar_nav_small_text": False,
+"sidebar_disable_expand": False,
+"sidebar_nav_child_indent": True,
+"sidebar_nav_compact_style": False,
+"sidebar_nav_legacy_style": False,
+"sidebar_nav_flat_style": False,
+"theme": "default",
+"default_theme_mode": "auto",
 }

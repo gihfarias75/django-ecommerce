@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criar conta | Minha Loja</title>
+</head>
+<body>
+    <h1>Crie sua conta</h1>
+    <p>Cadastre-se para comprar na nossa loja!</p>
+
+    <form method="post">
+        {% csrf_token %}
+
+        {{ formulario.non_field_errors }}
+
+        {% for campo in formulario %}
+            <div>
+                <label for="{{ campo.id_for_label }}">
+                    {{ campo.label }}
+                </label>
+
+                {{ campo }}
+
+                {% for erro in campo.errors %}
+                    <p>{{ erro }}</p>
+                {% endfor %}
+            </div>
+        {% endfor %}
+
+        <button type="submit">Criar conta</button>
+    </form>
+</body>
+</html>
